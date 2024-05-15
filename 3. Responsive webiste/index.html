@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(2, 2, 47);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 173);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 52px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0px;
+        }
+
+        .firstSection>div {
+
+            width: 35%;
+        }
+
+        .leftSection {
+
+            font-size: 2.5rem;
+        }
+
+        .leftSection .button{
+            padding:50px 0px;
+        }
+        .leftSection .btn {
+
+            padding:12px;
+            background-color: #1e2167;
+            color:white;
+            border-radius:66px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+
+
+
+
+        .rightSection img {
+            width: 80%;
+
+
+        }
+
+        .purple {
+            color: rgb(74, 10, 138);
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 2.0rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 0px;
+            display: flex;
+
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: grey;
+            width: 150px;
+        }
+
+
+        @media screen and (max-width:1000px){
+            body{
+
+                min-width: fit-content;
+                
+            }
+            .box{
+                flex-direction: column;
+            }
+            .secondSection .vertical{
+                height:unset;
+            }
+            .vertical-title,.vertical-desc{
+                left:45px;
+            }
+            .secondSection .box{
+                width:50vw;
+            }
+            nav{
+                flex-direction: column;
+            }
+            
+            .firstSection{
+                flex-direction: column-reverse;
+            }
+            .leftSection{
+                width:100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .rightSection{
+                width:721px !important;
+                display:flex;
+                justify-content: center;
+            }
+            .rightSection img{
+                width:45vw;
+                margin-bottom: 73px;
+
+            }
+            .image-top{
+                top:133px;
+            }
+            .secondSection{
+                max-width:88vw;
+                margin:auto;
+                height:250vh;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                Website design
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contacts us</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>Hi, my name is <span class="purple">vishal</span></div>
+
+                <div> and I am a Web Developer
+                </div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Learner', 'Web Desinger'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
